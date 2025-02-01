@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+     
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/about.css">
+        <link rel="stylesheet" href="./assets/css/contact.css">
+    </head>
+<body>
+    <nav
+    class="navbar navbar-expand-lg d-flex justify-content-between  header_color-wight header_fixed js-sticky-header pt-4 ">
+    <div class="container-navbar">
+        <span id="soso" class="logo__text-title ">Cassio</span>
+
+        <button id="firstIcon" class="navbar-icon">☰</button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul id="icons-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-facebook-f "></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-behance"></i></a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</nav>
+<div id="dropdown-screen" class="dropdown hidden d-flex flex-column mb-3 row-gap-3">
+
+    <button id="nav-second-icon" class="dropdown-icon hidden dropdown-iconActive">☰</button>
+
+    <div class=" header__circle-letters d-flex justify-content-center align-items-center ">
+        <div class="container-circle  animationActive">
+            <span class="circle paused"></span>
+            <svg class="vector-letters d-flex  animate__animated animate__bounce animate__fadeIn animate__delay-2s  "
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <path
+                    d="M86.96,68.76 C100.826736,69.826672 111.013301,73.02664 117.52,78.36 C124.026699,83.69336 127.28,89.9866304 127.28,97.24 C127.28,107.16005 123.386706,114.813306 115.6,120.2 C107.813294,125.586694 96.986736,128.28 83.12,128.28 C80.0266512,128.28 77.413344,128.226667 75.28,128.12 C68.2399648,127.906666 61.3600336,127.8 54.64,127.8 C43.6532784,127.8 35.4400272,127.959998 30,128.28 L30,125.08 C33.5200176,124.866666 36.1066584,124.440003 37.76,123.8 C39.4133416,123.159997 40.5333304,121.933342 41.12,120.12 C41.7066696,118.306658 42,115.373354 42,111.32 L42,31.96 C42,27.9066464 41.7066696,24.9733424 41.12,23.16 C40.5333304,21.3466576 39.4133416,20.1200032 37.76,19.48 C36.1066584,18.8399968 33.5200176,18.4133344 30,18.2 L30,15 C35.4400272,15.3200016 43.5466128,15.48 54.32,15.48 L72.08,15.32 C74.213344,15.2133328 76.6666528,15.16 79.44,15.16 C92.240064,15.16 102.026633,17.4533104 108.8,22.04 C115.573367,26.6266896 118.96,32.7066288 118.96,40.28 C118.96,46.4666976 116.266694,52.22664 110.88,57.56 C105.493306,62.89336 97.5200528,66.5199904 86.96,68.44 L86.96,68.76 Z M77.36,18.2 C74.4799856,18.2 72.37334,18.5733296 71.04,19.32 C69.70666,20.0666704 68.773336,21.3999904 68.24,23.32 C67.706664,25.2400096 67.44,28.1199808 67.44,31.96 L67.44,68.12 L74.32,68.12 C81.253368,68.12 86.1066528,65.7466904 88.88,61 C91.6533472,56.2533096 93.04,49.9333728 93.04,42.04 C93.04,34.03996 91.7866792,28.0666864 89.28,24.12 C86.7733208,20.1733136 82.8000272,18.2 77.36,18.2 Z M78.48,124.6 C93.3067408,124.6 100.72,115.26676 100.72,96.6 C100.72,88.1732912 98.586688,81.7733552 94.32,77.4 C90.053312,73.0266448 83.3333792,70.84 74.16,70.84 L67.44,70.84 L67.44,111.32 C67.44,115.160019 67.706664,117.986658 68.24,119.8 C68.773336,121.613342 69.8133256,122.866663 71.36,123.56 C72.9066744,124.253337 75.279984,124.6 78.48,124.6 Z"
+                    data-vector-id="B" class="vector-letter"></path>
+            </svg>
+        </div>
+
+        <img src="./assets/img/graybg.png"
+            class="dropdown-img animate__animated animate__bounce animate__fadeIn animate__delay-2s" />
+
+
+    </div>
+    <div class="pagee  d-flex flex-column mb-3 row-gap-2">
+        <a class=" animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('blog.html')">Blog</a>
+        <a class="  animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('about.html')">About</a>
+        <a class=" animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('contact.html')">Contacts</a>
+    </div>
+
+
+</div>
+<main>
+    <section class="blog">
+        <div class="blog-section d-flex flex-column justify-content-center align-items-center container">
+            <h1 class="entry-title section-masthead__heading   " data-split-text-type="lines, words, chars"
+                data-split-text-set="chars">Contact</h1>
+            <div class="line"></div>
+
+        </div>
+    </section>
+
+    <section class="map"> 
+        <div id="map"></div></section>
+
+    
+        <section class="elementor-section-contact elementor-inner-section elementor-element elementor-element-f2aa93f elementor-section-full_width section_minus-mt-small elementor-section-height-default elementor-section-height-default" data-id="f2aa93f" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-no">
+    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-350c21d" data-id="350c21d" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-822bb4c elementor-widget elementor-widget-shortcode" data-id="822bb4c" data-element_type="widget" data-widget_type="shortcode.default">
+            <div class="elementor-shortcode">
+<div class="wpcf7 js" id="wpcf7-f221-p188-o1" lang="en-US" dir="ltr" data-wpcf7-id="221">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/cassio/wp/contacts/#wpcf7-f221-p188-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="221">
+<input type="hidden" name="_wpcf7_version" value="6.0.2">
+<input type="hidden" name="_wpcf7_locale" value="en_US">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f221-p188-o1">
+<input type="hidden" name="_wpcf7_container_post" value="188">
+<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+</div>
+<div class="container section section_pt-small section_pb-small bg-off-white">
+<div class="row justify-content-center text-center">
+<div class="col-sm-10">
+<h3 class="form__heading">Get in Touch with Us!</h3>
+<div class="row form__row">
+<div class="col-lg-6 form__col">
+<label class="input-float js-input-float">
+<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-float__input" aria-required="true" aria-invalid="false" value="" type="text" name="your-name"></span>
+<span class="input-float__label">Your Name</span>
+</label>
+</div>
+<div class="col-lg-6 form__col">
+<label class="input-float js-input-float">
+<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email input-float__input" aria-required="true" aria-invalid="false" value="" type="email" name="your-email"></span>
+<span class="input-float__label">Your Email</span>
+</label>
+</div>
+</div>
+<div class="row form__row">
+<div class="col form__col">
+<label class="input-float js-input-float">
+<span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="3" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input-float__input input-float__input_textarea" aria-invalid="false" name="your-message"></textarea></span>
+<span class="input-float__label">Your Message</span>
+</label>
+</div>
+</div>
+<div class="row form__row">
+<div class="col form__col form__col_submit">
+<button class="button button_solid button_accent-secondary-2 button_fullwidth wpcf7-form-control wpcf7-submit" type="submit"><span>Send Message</span></button>
+</div>
+</div>
+</div>
+</div>
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+
+    <section class="elementor-section elementor-inner-section elementor-element elementor-element-5698bbd bg-white section_pt-small section_pb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5698bbd" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-wide">
+
+<div class="figure-contact">
+        <div class="figure-contact__icon fa fa-location-arrow"></div>
+                    <div class="figure-contact__item">4575 Redbud Drive Brooklyn<br>
+NY 11206 USA</div>
+
+</div>
+
+<div class="figure-contact">
+        <div class="figure-contact__icon fa fa-phone"></div>
+                    <div class="figure-contact__item">+1 (347) 783-92-96<br>
++1 (347) 783-19-00</div>
+</div>
+
+ 
+
+
+
+<div class="figure-contact">
+        <div class="figure-contact__icon fa fa-envelope"></div>
+                    <div class="figure-contact__item"><a href="mailto:cassio@example.com">cassio@example.com</a></div>
+</div>
+
+    
+
+
+</div>
+</section>
+
+</main>
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row d-flex  justify-content-around">
+            <div class="footer-start">
+                <div class="logo">
+                    <a href="#"> Cassio</a>
+                </div>
+                <p>Architecture agency based in London</p>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f fa-lg"></i>
+                <i class="fa-brands fa-instagram fa-lg"></i>
+                <i class="fa-brands fa-behance fa-lg"></i>
+                <i class="fa-brands fa-twitter fa-lg"></i>
+            </div>
+
+            <div class="footer-item">
+                <h2>contact us</h2>
+                <nav class="nav">
+                    <a href="#">CCdoc123&#64;gmail.com</a>
+                    <a href="#">+1 504 558 6739</a>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script>
+    const map = L.map('map').setView([31.9522, 35.2332], 12); // الإحداثيات
+
+    // إضافة نمط خريطة من CartoDB
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 19
+    }).addTo(map);
+
+    // إضافة علامة (Marker)
+    L.marker([31.9522, 35.2332]).addTo(map)
+        .bindPopup('مرحبًا بك في موقعنا!')
+        .openPopup();
+</script>
+<script src="./assets/js/contact.js"></script>
+</body>
+</html>

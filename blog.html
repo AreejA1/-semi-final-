@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+</head>
+<body>
+    <nav
+    class="navbar navbar-expand-lg d-flex justify-content-between  header_color-wight header_fixed js-sticky-header pt-4 ">
+    <div class="container-navbar">
+        <span id="soso" class="logo__text-title ">Cassio</span>
+
+        <button id="firstIcon" class="navbar-icon">☰</button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul id="icons-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-facebook-f "></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa-brands fa-behance"></i></a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</nav>
+<div id="dropdown-screen" class="dropdown hidden d-flex flex-column mb-3 row-gap-3">
+
+    <button id="nav-second-icon" class="dropdown-icon hidden dropdown-iconActive">☰</button>
+
+    <div class=" header__circle-letters d-flex justify-content-center align-items-center ">
+        <div class="container-circle  animationActive">
+            <span class="circle paused"></span>
+            <svg class="vector-letters d-flex  animate__animated animate__bounce animate__fadeIn animate__delay-2s  "
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <path
+                    d="M86.96,68.76 C100.826736,69.826672 111.013301,73.02664 117.52,78.36 C124.026699,83.69336 127.28,89.9866304 127.28,97.24 C127.28,107.16005 123.386706,114.813306 115.6,120.2 C107.813294,125.586694 96.986736,128.28 83.12,128.28 C80.0266512,128.28 77.413344,128.226667 75.28,128.12 C68.2399648,127.906666 61.3600336,127.8 54.64,127.8 C43.6532784,127.8 35.4400272,127.959998 30,128.28 L30,125.08 C33.5200176,124.866666 36.1066584,124.440003 37.76,123.8 C39.4133416,123.159997 40.5333304,121.933342 41.12,120.12 C41.7066696,118.306658 42,115.373354 42,111.32 L42,31.96 C42,27.9066464 41.7066696,24.9733424 41.12,23.16 C40.5333304,21.3466576 39.4133416,20.1200032 37.76,19.48 C36.1066584,18.8399968 33.5200176,18.4133344 30,18.2 L30,15 C35.4400272,15.3200016 43.5466128,15.48 54.32,15.48 L72.08,15.32 C74.213344,15.2133328 76.6666528,15.16 79.44,15.16 C92.240064,15.16 102.026633,17.4533104 108.8,22.04 C115.573367,26.6266896 118.96,32.7066288 118.96,40.28 C118.96,46.4666976 116.266694,52.22664 110.88,57.56 C105.493306,62.89336 97.5200528,66.5199904 86.96,68.44 L86.96,68.76 Z M77.36,18.2 C74.4799856,18.2 72.37334,18.5733296 71.04,19.32 C69.70666,20.0666704 68.773336,21.3999904 68.24,23.32 C67.706664,25.2400096 67.44,28.1199808 67.44,31.96 L67.44,68.12 L74.32,68.12 C81.253368,68.12 86.1066528,65.7466904 88.88,61 C91.6533472,56.2533096 93.04,49.9333728 93.04,42.04 C93.04,34.03996 91.7866792,28.0666864 89.28,24.12 C86.7733208,20.1733136 82.8000272,18.2 77.36,18.2 Z M78.48,124.6 C93.3067408,124.6 100.72,115.26676 100.72,96.6 C100.72,88.1732912 98.586688,81.7733552 94.32,77.4 C90.053312,73.0266448 83.3333792,70.84 74.16,70.84 L67.44,70.84 L67.44,111.32 C67.44,115.160019 67.706664,117.986658 68.24,119.8 C68.773336,121.613342 69.8133256,122.866663 71.36,123.56 C72.9066744,124.253337 75.279984,124.6 78.48,124.6 Z"
+                    data-vector-id="B" class="vector-letter"></path>
+            </svg>
+        </div>
+
+        <img src="./assets/img/graybg.png"
+            class="dropdown-img animate__animated animate__bounce animate__fadeIn animate__delay-2s" />
+
+
+    </div>
+    <div class="pagee  d-flex flex-column mb-3 row-gap-2">
+        <a class=" animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('blog.html')">Blog</a>
+        <a class="  animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('about.html')">About</a>
+        <a class=" animate__animated animate__bounce animate__fadeInUp animate__delay-2s"
+            onclick="navigateTo('contact.html')">Contacts</a>
+    </div>
+
+
+</div>
+
+<main>
+    <section class="blog">
+        <div class="blog-section d-flex flex-column justify-content-center align-items-center container">
+		<h1 class="entry-title section-masthead__heading   " data-split-text-type="lines, words, chars" data-split-text-set="chars">  Blog</h1>
+		<div class="line"></div>
+				
+							</div>
+    </section>
+
+    <section class="blogContent">
+        <div class="container-fluid container_xs-no-padding">
+            <div class="section section_mt-small section_pt-small section_pb-small">
+                
+                    <div class="blogRow  d-flex flex-row justify-content-between ">
+                        <div class="cloumn-1 col-lg-8 order-lg-1">
+                                                    <div class="section-blog__posts">
+                                        <div class="section-blog__wrapper-post">
+                            
+        <article class="post post-preview post-509 type-post status-publish format-standard has-post-thumbnail hentry category-business category-uncategorized tag-creative tag-design tag-develop" id="post-509">
+        
+                    <a class="post-preview__media" href="https://artemsemkin.com/cassio/wp/enlightenment-is-not-just-one-state/" aria-labelledby="post-509-title">
+                    <img  fetchpriority="high" width="1920" height="1200" src="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06.jpg.webp" class="blog-img" alt="" decoding="async" srcset="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06.jpg.webp 1920w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06-300x188.jpg.webp 300w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06-1024x640.jpg.webp 1024w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06-768x480.jpg.webp 768w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L06-1536x960.jpg.webp 1536w" sizes="(max-width: 1920px) 100vw, 1920px">		</a>
+                <!-- - post media-->
+            
+            <div class="informatio d-flex flex-row">
+                            <div class="col-lg-4 post-preview__wrapper-meta">
+                        
+                    <div class="date">
+                    <a href="https://artemsemkin.com/cassio/wp/2024/05/">May 22, 2024</a>
+                </div>
+            
+                                <div class="business">
+                        <a href="https://artemsemkin.com/cassio/wp/category/business/" rel="category tag">Business</a>,&nbsp;<a href="https://artemsemkin.com/cassio/wp/category/uncategorized/" rel="category tag">Uncategorized</a>			</div>
+                    
+                    <div class="no">
+                    <a href="https://artemsemkin.com/cassio/wp/enlightenment-is-not-just-one-state/#respond">No Comments</a>
+                </div>
+            
+                    <div class="by">
+                    <span class="post-meta__item-text">by</span>
+                    <a href="https://artemsemkin.com/cassio/wp/author/art/">art</a>
+                </div>
+                        </div>
+                        <div class="enlightenment col-lg-8 post-preview__wrapper-content">
+                    <div class="post-preview__header">
+                        <a href="https://artemsemkin.com/cassio/wp/enlightenment-is-not-just-one-state/" class="post-preview__link">
+                            <h2 class="h4" id="post-509-title">Enlightenment Is Not Just One State</h2></a>
+                    </div>
+                    <!-- - post header-->
+                    Much evil soon high in hope do view. Out may few northward believing attempted. Yet timed being songs marry one defer men our. Although finished blessing do of. Consider speaking me prospect whatever if. Ten nearer rather hunted six parish indeed number. Allowance repulsive sex may contained can set suspected abilities cordially. Do part am…					
+                    		<div class="post-preview__wrapper-readmore">
+                            
+        <a href="https://artemsemkin.com/cassio/wp/enlightenment-is-not-just-one-state/" class="button bg-accent-secondary-4 button_solid post__read-more">Read More</a>
+                        </div>
+                            </div>
+            </div>
+            <!-- - post content & meta-->
+        
+        </article>
+                    </div>
+            <div class="section-blog__wrapper-post">
+                            
+        <article class="post post-preview post-906 type-post status-publish format-standard has-post-thumbnail hentry category-travel tag-ajax tag-creative tag-photography tag-theme" id="post-906">
+        
+                    <a class="post-preview__media" href="https://artemsemkin.com/cassio/wp/do-your-self-realizations-quickly-fade/" aria-labelledby="post-906-title">
+                    <img width="1920" height="1200" src="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01.jpg.webp" class="blog-img" alt="" decoding="async" srcset="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01.jpg.webp 1920w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01-300x188.jpg.webp 300w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01-1024x640.jpg.webp 1024w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01-768x480.jpg.webp 768w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/I01-1536x960.jpg.webp 1536w" sizes="(max-width: 1920px) 100vw, 1920px">		</a>
+                <!-- - post media-->
+            
+            <div class="informatio d-flex flex-row">
+                            <div class="col-lg-4 post-preview__wrapper-meta">
+                        
+                    <div class="date">
+                    <a href="https://artemsemkin.com/cassio/wp/2024/02/">February 1, 2024</a>
+                </div>
+            
+                                <div class="business">
+                        <a href="https://artemsemkin.com/cassio/wp/category/travel/" rel="category tag">Travel</a>			</div>
+                    
+                    <div class="no">
+                    <a href="https://artemsemkin.com/cassio/wp/do-your-self-realizations-quickly-fade/#respond">No Comments</a>
+                </div>
+            
+                    <div class="by">
+                    <span class="post-meta__item-text">by</span>
+                    <a href="https://artemsemkin.com/cassio/wp/author/art/">art</a>
+                </div>
+                        </div>
+                        <div class="enlightenment">
+                    <div class="post-preview__header">
+                        <a href="https://artemsemkin.com/cassio/wp/do-your-self-realizations-quickly-fade/" class="post-preview__link">
+                            <h2  id="post-906-title">Do Your Self Realizations Quickly Fade?</h2></a>
+                    </div>
+                    <!-- - post header-->
+                    We’ve all heard how crucial it is to set intentions, goals and targets. Powerful goals electrify us. Clear intentions energize and pull us forward. Without a clearcut intention, we’re reactive and don’t get around to doing the important things when we want them done. Instead, we spend our time fighting random fires. Without clear intentions,…							<div class="post-preview__wrapper-readmore">
+                            
+        <a href="https://artemsemkin.com/cassio/wp/do-your-self-realizations-quickly-fade/" class="button bg-accent-secondary-4 button_solid post__read-more">Read More</a>
+                        </div>
+                            </div>
+            </div>
+            <!-- - post content & meta-->
+        
+        </article>
+                    </div>
+            <div class="section-blog__wrapper-post">
+                            
+        <article class="post post-preview post-808 type-post status-publish format-standard has-post-thumbnail hentry category-news tag-clean tag-creative tag-design tag-modern tag-premium" id="post-808">
+        
+                    <a class="post-preview__media" href="https://artemsemkin.com/cassio/wp/change-your-mind-change-your-luck/" aria-labelledby="post-808-title">
+                    <img width="1920" height="1200" src="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02.jpg.webp" class="blog-img" alt="" decoding="async" srcset="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02.jpg.webp 1920w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02-300x188.jpg.webp 300w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02-1024x640.jpg.webp 1024w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02-768x480.jpg.webp 768w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/B02-1536x960.jpg.webp 1536w" sizes="(max-width: 1920px) 100vw, 1920px">		</a>
+                <!-- - post media-->
+            
+            <div class="informatio d-flex flex-row">
+                            <div class="col-lg-4 post-preview__wrapper-meta">
+                        
+                    <div class="date">
+                    <a href="https://artemsemkin.com/cassio/wp/2024/01/">January 28, 2024</a>
+                </div>
+            
+                                <div class="business">
+                        <a href="https://artemsemkin.com/cassio/wp/category/news/" rel="category tag">News</a>			</div>
+                    
+                    <div class="no">
+                    <a href="https://artemsemkin.com/cassio/wp/change-your-mind-change-your-luck/#respond">No Comments</a>
+                </div>
+            
+                    <div class="by">
+                    <span class="post-meta__item-text">by</span>
+                    <a href="https://artemsemkin.com/cassio/wp/author/art/">art</a>
+                </div>
+                        </div>
+                        <div class="enlightenment">
+                    <div class="post-preview__header">
+                        <a href="https://artemsemkin.com/cassio/wp/change-your-mind-change-your-luck/" class="post-preview__link">
+                            <h2 id="post-808-title">Change Your Mind Change Your Luck</h2></a>
+                    </div>
+                    <!-- - post header-->
+                    Oh acceptance apartments up sympathize astonished delightful. Waiting him new lasting towards. Continuing melancholy especially so to. Me unpleasing impossible in attachment announcing so astonished. What ask leaf may nor upon door. Tended remain my do stairs. Oh smiling amiable am so visited cordial in offices hearted. Still court no small think death so an…							<div class="post-preview__wrapper-readmore">
+                            
+        <a href="https://artemsemkin.com/cassio/wp/change-your-mind-change-your-luck/" class="button bg-accent-secondary-4 button_solid post__read-more">Read More</a>
+                        </div>
+                            </div>
+            </div>
+            <!-- - post content & meta-->
+        
+        </article>
+                    </div>
+            <div class="section-blog__wrapper-post">
+                            
+        <article class="post post-preview post-806 type-post status-publish format-standard has-post-thumbnail hentry category-design category-development tag-motion tag-template tag-theme tag-wordpress" id="post-806">
+        
+                    <a class="post-preview__media" href="https://artemsemkin.com/cassio/wp/computer-hardware-desktops-and-notebooks-and-handhelds-oh-my/" aria-labelledby="post-806-title">
+                    <img loading="lazy" width="1920" height="1200" src="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05.jpg.webp" class="blog-img" alt="" decoding="async" srcset="https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05.jpg.webp 1920w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05-300x188.jpg.webp 300w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05-1024x640.jpg.webp 1024w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05-768x480.jpg.webp 768w, https://artemsemkin.com/cassio/wp/wp-content/uploads/sites/8/2019/09/L05-1536x960.jpg.webp 1536w" sizes="(max-width: 1920px) 100vw, 1920px">		</a>
+                <!-- - post media-->
+            
+            <div class="informatio d-flex flex-row">
+                            <div class="col-lg-4 post-preview__wrapper-meta">
+                        
+                    <div class="date">
+                    <a href="https://artemsemkin.com/cassio/wp/2024/01/">January 28, 2024</a>
+                </div>
+            
+                                <div class="business">
+                        <a href="https://artemsemkin.com/cassio/wp/category/design/" rel="category tag">Design</a>,&nbsp;<a href="https://artemsemkin.com/cassio/wp/category/development/" rel="category tag">Development</a>			</div>
+                    
+                    <div class="no">
+                    <a href="https://artemsemkin.com/cassio/wp/computer-hardware-desktops-and-notebooks-and-handhelds-oh-my/#respond">No Comments</a>
+                </div>
+            
+                    <div class=by">
+                    <span class="post-meta__item-text">by</span>
+                    <a href="https://artemsemkin.com/cassio/wp/author/art/">art</a>
+                </div>
+                        </div>
+                        <div class="enlightenment">
+                    <div class="post-preview__header">
+                        <a href="https://artemsemkin.com/cassio/wp/computer-hardware-desktops-and-notebooks-and-handhelds-oh-my/" class="post-preview__link">
+                            <h2  id="post-806-title">Computer Hardware Desktops And Notebooks And Handhelds Oh My</h2></a>
+                    </div>
+                    <!-- - post header-->
+                    Style never met and those among great. At no or september sportsmen he perfectly happiness attending. Depending listening delivered off new she procuring satisfied sex existence. Person plenty answer to exeter it if. Law use assistance especially resolution cultivated did out sentiments unsatiable. Way necessary had intention happiness but september delighted his curiosity. Furniture furnished…							<div class="post-preview__wrapper-readmore">
+                            
+        <a href="https://artemsemkin.com/cassio/wp/computer-hardware-desktops-and-notebooks-and-handhelds-oh-my/" class="button bg-accent-secondary-4 button_solid post__read-more">Read More</a>
+                        </div>
+                            </div>
+            </div>
+            <!-- - post content & meta-->
+        
+        </article>
+                    </div>
+                                </div>
+                                <!-- - posts -->
+                                                                        <div class="section-blog__wrapper-pagination">
+                                    
+                <nav class="navigation pagination" role="navigation">
+                    <div class="screen-reader-text d-none">Posts navigation</div>
+                        <div class="nav-links">
+                            
+                            <div class="nav-links__container"><span aria-current="page" class="page-numbers current">1</span>
+        <a class="page-numbers" href="https://artemsemkin.com/cassio/wp/blog/page/2/">2</a></div>
+                        <a href="https://artemsemkin.com/cassio/wp/blog/page/2/" class="page-numbers next material-icons">keyboard_arrow_right</a>
+                    </div>
+                </nav>						</div>
+                                <!-- - pagination -->
+                                            </div>
+                                            <div class="column-2 col-lg-3 order-lg-2">
+                                <div class="section-blog__sidebar">
+                                        <aside class="sidebar sidebar_no-margin-last-widget widget-area">
+                <section class="widget widget_search">
+        <form method="get" class="search-form" action="https://artemsemkin.com/cassio/wp/">
+            <div class="input-float input-search js-input-float">
+                <input type="search" id="search-form-67695e5e6ce04" class="input-float__input input-search__input" value="" name="s" aria-labelledby="label-67695e5e6ce0a"><span id="label-67695e5e6ce0a" class="input-float__label">Search …</span>
+                <button type="submit" class="input-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+        </section><section class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+        
+                    <ul>
+                            <li class="cat-item cat-item-9"><a href="https://artemsemkin.com/cassio/wp/category/business/">Business</a>
+        </li>
+            <li class="cat-item cat-item-17"><a href="https://artemsemkin.com/cassio/wp/category/design/">Design</a>
+        </li>
+            <li class="cat-item cat-item-26"><a href="https://artemsemkin.com/cassio/wp/category/development/">Development</a>
+        </li>
+            <li class="cat-item cat-item-13"><a href="https://artemsemkin.com/cassio/wp/category/news/">News</a>
+        </li>
+            <li class="cat-item cat-item-24"><a href="https://artemsemkin.com/cassio/wp/category/travel/">Travel</a>
+        </li>
+            <li class="cat-item cat-item-1"><a href="https://artemsemkin.com/cassio/wp/category/uncategorized/">Uncategorized</a>
+        </li>
+                    </ul>
+        
+                    </section>
+                <section class="widget widget_recent_entries">
+                <h2 class="widgettitle">Recent Posts</h2>
+        
+                <ul>
+                                                    <li>
+                            <a href="https://artemsemkin.com/cassio/wp/enlightenment-is-not-just-one-state/">Enlightenment Is Not Just One State</a>
+                                                    <span class="post-date">May 22, 2024</span>
+                                            </li>
+                                                    <li>
+                            <a href="https://artemsemkin.com/cassio/wp/do-your-self-realizations-quickly-fade/">Do Your Self Realizations Quickly Fade?</a>
+                                                    <span class="post-date">February 1, 2024</span>
+                                            </li>
+                                                    <li>
+                            <a href="https://artemsemkin.com/cassio/wp/change-your-mind-change-your-luck/">Change Your Mind Change Your Luck</a>
+                                                    <span class="post-date">January 28, 2024</span>
+                                            </li>
+                                                    <li>
+                            <a href="https://artemsemkin.com/cassio/wp/computer-hardware-desktops-and-notebooks-and-handhelds-oh-my/">Computer Hardware Desktops And Notebooks And Handhelds Oh My</a>
+                                                    <span class="post-date">January 28, 2024</span>
+                                            </li>
+                                                    <li>
+                            <a href="https://artemsemkin.com/cassio/wp/everything-is-designed-but-just-a-few-things-designed-well/">Everything is designed but just a few things designed well</a>
+                                                    <span class="post-date">January 28, 2024</span>
+                                            </li>
+                            </ul>
+        
+                </section>
+                <section class="widget widget_cassio_logo">
+        <a class="logo " href="https://artemsemkin.com/cassio/wp/">
+                        <div class="logo__text">
+                    <span class="logo__text-title-lastOfType">Cassio</span>
+                            </div>
+            </a>
+        
+                            <div class="logo__description">Architect agency based in London</div>
+                
+                </section>
+                <section class="widget widget_cassio_social">		
+                    	<ul class="social d-flex flex-row ">
+                                                                                                                                <li class="social__item">
+                                    <a class="social__icon" href="#" target="_blank"><i class="fa-brands fa-facebook-f "></i></a>
+                                </li>
+                                                                                                                                                    <li class="social__item">
+                                    <a class="social__icon" href="#" target="_blank""><i class="fa-brands fa-twitter fa-lg"></i></a>
+                                </li>
+                                                                                                                                                    <li class="social__item">
+                                    <a class="social__icon" href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                         <li class="social__item">
+                                    <a class="social__icon" href="#" target="_blank" ><i class="fa-brands fa-behance"></i></a>
+                                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                </section>	</aside>
+                                </div>
+                            </div>
+                            <!-- - sidebar -->
+                                    </div>
+                
+            </div>
+            </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row d-flex  justify-content-around">
+            <div class="footer-start">
+                <div class="logo">
+                    <a href="#"> Cassio</a>
+                </div>
+                <p>Architecture agency based in London</p>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f fa-lg"></i>
+                <i class="fa-brands fa-instagram fa-lg"></i>
+                <i class="fa-brands fa-behance fa-lg"></i>
+                <i class="fa-brands fa-twitter fa-lg"></i>
+            </div>
+
+            <div class="footer-item">
+                <h2>contact us</h2>
+                <nav class="nav">
+                    <a href="#">CCdoc123&#64;gmail.com</a>
+                    <a href="#">+1 504 558 6739</a>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

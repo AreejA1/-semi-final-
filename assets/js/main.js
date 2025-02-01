@@ -116,121 +116,118 @@ function navigateTo(page) {
     window.location.href = page;
 }
 
+   
+
    /**products and categories----------------------------------------*/
    let products = {
     data: [
       {
-        productName: "Regular White T-Shirt",
+        productName: "Elegant Living Room",
         category: "Apartment",
-        price: "30",
         image: "./assets/img/Elegant-living-room.jpeg.webp",
+        htmlPage:"elegantLivingRoom.html",
       },
       {
-        productName: "Beige Short Skirt",
+        productName: "Royal King Suite",
         category: "Interior",
-        price: "49",
-        image: "assets/img/Royal-king-suite.jpg.webp",
+        image: "./assets/img/Royal-king-suite.jpg.webp",
+        htmlPage:"royalkingsuite.html",
       },
       {
-        productName: "Sporty SmartWatch",
+        productName: "Luxury Touch",
         category: "Interior",
-        price: "99",
-        image: "assets/img/luxuryTouch.webp",
+        image: "./assets/img/luxuryTouch.webp",
+        htmlPage:"luxuryTouch.html",
       },
       {
-        productName: "Basic Knitted Top",
+        productName: "Hillside Shelter",
         category: "House",
-        price: "29",
-        image: "assets/img/Hillside-Shelter.jpg.webp",
+        image: "./assets/img/Hillside-Shelter.jpg.webp",
+        htmlPage:"hillsideShelter.html",
       },
       {
-        productName: "Black Leather Jacket",
+        productName: "Class Bulding",
         category: "Architecture",
-        price: "129",
-        image: "assets/img/class-bulding.webp",
+        image: "./assets/img/class-bulding.webp",
+        htmlPage:"class-bulding.html",
       },
       {
-        productName: "Stylish Pink Trousers",
+        productName: "Queens Castle",
         category: "Interior",
-        price: "89",
-        image: "assets/img/queens-castle-sq.jpeg (1).webp",
+        image: "./assets/img/queens-castle-sq.jpeg (1).webp",
+        htmlPage:"queenscastle.html",
       },
       {
-        productName: "Brown Men's Jacket",
+        productName: "Aristocratic Place",
         category: "House",
-        price: "189",
-        image: "assets/img/Aristocratic-place.jpeg.webp",
+        image: "./assets/img/Aristocratic-place.jpeg.webp",
+        htmlPage:"aristocraticPlace.html",
       },
       {
-        productName: "Comfy Gray Pants",
+        productName: "Scandinavian Room",
         category: "Apartment",
-        price: "49",
-        image: "assets/img/Scandinavian-room.jpg.webp",
+        image: "./assets/img/Scandinavian-room.jpg.webp",
+        htmlPage:"scandinavianRoom.html",
       },
       
       {
-        productName: "Comff",
+        productName: "European Style",
         category: "Apartment",
-        price: "49",
-        image: "assets/img/European-style.jpg.webp",
+        image: "./assets/img/European-style.jpg.webp",
+        htmlPage:"europeanStyle.html",
       }
       ,
       
       {
-        productName: "Comff",
+        productName: "Vintage",
         category: "House",
-        price: "49",
-        image: "assets/img/Vintage-sq.jpeg.webp",
+        image: "./assets/img/Vintage-sq.jpeg.webp",
+        htmlPage:"vintage.html",
       }
       ,
       
       {
-        productName: "Comff",
+        productName: "Platinum",
         category: "Interior",
-        price: "49",
-        image: "assets/img/Platinum-sq.jpeg.webp",
+        image: "./assets/img/Platinum-sq.jpeg.webp",
+        htmlPage:"platinum.html",
       }
       ,
       
       {
-        productName: "Comff",
+        productName: "Dark Loft",
         category: "Interior",
-        price: "49",
-        image: "assets/img/Dark-loft-sq.jpg.webp",
+        image: "./assets/img/Dark-loft-sq.jpg.webp",
+        htmlPage:"darkLoft.html",
       }
     ],
   };
+  const displayProduct = () => {
+    let index=0;
+    const result = products.data.map((card) => {
+      return `<div class="card card--${index++} hide ${card.category} animate__animated animate__fadeInUp" >
+          <div class="image-container">
+          <img src="${card.image}"/>  </div>
+            <div class="figcaption ">
+              <span class="info">
+                <a href="${card.htmlPage}">
+                <span class="categorySpan">${card.category}</span>
+                <h3 class ="animatedText">${card.productName}</h3>
+                <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </span>
+            </div>
+          
+          </div>`;
+    }).join(''); // Join the array to a single string
+    document.querySelector(".soso").innerHTML = result;
+  };
+  displayProduct();
   
-  for (let i of products.data) {
-    //Create Card
-    let card = document.createElement("div");
-    //Card should have category and should stay hidden initially
-    card.classList.add("card", i.category, "hide");
-    //image div
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("image-container");
-    //img tag
-    let image = document.createElement("img");
-    image.setAttribute("src", i.image);
-    imgContainer.appendChild(image);
-    card.appendChild(imgContainer);
-    //container
-    let container = document.createElement("div");
-    container.classList.add("container");
-    //product name
-    let name = document.createElement("h5");
-    name.classList.add("product-name");
-    name.innerText = i.productName.toUpperCase();
-    container.appendChild(name);
-    //price
-    let price = document.createElement("h6");
-    price.innerText = "$" + i.price;
-    container.appendChild(price);
   
-    card.appendChild(container);
-    document.getElementById("products").appendChild(card);
-  }
-  
+  const cards = document.querySelectorAll('.card');
+
+
   //parameter passed from button (Parameter same as category)
   function filterProduct(value) {
     //Button class code
@@ -248,6 +245,7 @@ function navigateTo(page) {
     let elements = document.querySelectorAll(".card");
     //loop through all cards
     elements.forEach((element) => {
+   
       //display all cards on 'all' button click
       if (value == "all") {
         element.classList.remove("hide");
@@ -264,13 +262,10 @@ function navigateTo(page) {
     });
   }
   
-  //Search button click
+  
 
   
-  //Initially display all products
-  window.onload = () => {
-    filterProduct("all");
-  };
+ 
 
 
 
@@ -284,11 +279,14 @@ document.addEventListener('scroll', function() {
         if (cardBottomOffset >= 0 ) {
             setTimeout(() => {
                 card.classList.add('animate__animated', 'animate__fadeInUp');
+                buttons.classList.add('animate__animated', 'animate__fadeInUp');
                 card.classList.remove('hide');
+              
             }, index * 600); 
         }
     });
 });
+
 
 function getOffsetBottom(element) {
     const offsetParent = element.offsetParent;
@@ -298,8 +296,73 @@ function getOffsetBottom(element) {
 
     return parentHeight - (elementOffsetTop + elementHeight);
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const texts = document.querySelectorAll(".animatedText");
 
+  texts.forEach(container => {
+    const text = container.innerText;
+    container.innerHTML = "";
 
+    text.split(' ').forEach((word, wordIndex) => {
+      const wordDiv = document.createElement('div');
+      wordDiv.className = 'word';
+
+      word.split('').forEach((char, charIndex) => {
+        const span = document.createElement('span');
+        span.className = 'letter';
+        span.setAttribute('style', `--index:${charIndex}; left: calc(var(--h4-max-font-size) - ${charIndex}px);`);
+        span.innerText = char;
+      /* span.style.animation = `letterfadeInright 0.5s ease ${charIndex * 0.2}s forwards`;*/
+        wordDiv.appendChild(span);
+      });
+      container.appendChild(wordDiv);
+    });
+  });
+  const cards = document.querySelectorAll('.card');
+let charIndex=0;
+  cards.forEach(card => {
+    charIndex++;
+    card.addEventListener('mouseover', function() {
+      const letters = card.querySelectorAll('.letter');
+      const categoriesSpan= card.querySelectorAll('.categorySpan');
+      letters.forEach(letter => {
+        letter.style.animation = `fadeInRight 0.9s  forwards`;
+        
+       
+      });
+      categoriesSpan.forEach(categorySpan => {
+        categorySpan.style.animation = `categorySpanDOWN 0.9s  forwards`;
+        
+
+      });
+    });
+
+    card.addEventListener('mouseout', function() {
+      const letters = card.querySelectorAll('.letter');
+      letters.forEach(letter => {
+        letter.style.transform = ''; // Reset rotation
+        letter.style.color = ''; // Reset color
+        letter.style.fontWeight = ''; // Reset font weight
+      });
+    });
+
+  });
+
+  
  
+});
 
 
+
+
+
+
+
+  
+    
+
+
+ //Initially display all products
+ window.onload = () => {
+  filterProduct("all");
+};
